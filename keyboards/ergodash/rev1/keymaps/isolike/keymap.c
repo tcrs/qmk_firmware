@@ -23,7 +23,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_RAISE] = LAYOUT_3key_1us(
      KC_F12,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______,          _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
      KC_INS,  KC_HOME, KC_UP,   KC_END,  _______, KC_PGUP, _______,          _______, KC_WH_U, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_INS,
-     _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_PGDN, CMB_TOG,          _______, KC_WH_D, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, _______,
+     _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_PGDN, _______,          _______, KC_WH_D, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, _______,
      _______, KC_PSCR, KC_SLCK, KC_PAUS, _______, _______, _______,          _______, _______, _______, _______, _______, _______, KC_GRV,
      _______, KC_RGUI, _______, _______,          _______, _______,          _______, _______,          _______, _______, _______, _______
   )
