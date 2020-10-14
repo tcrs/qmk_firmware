@@ -33,6 +33,7 @@ enum combos {
   COMBO_LBRC,
   COMBO_RBRC,
   COMBO_UNDS,
+  COMBO_MINS,
   COMBO_EQL,
 };
 
@@ -42,11 +43,13 @@ enum combos {
 COMBO_DECL2(lbrc, M, COMM);
 COMBO_DECL2(rbrc, COMM, DOT);
 COMBO_DECL2(unds, L, SCLN);
+COMBO_DECL2(mins, SCLN, QUOT);
 COMBO_DECL2(equal, SLSH, NUHS);
 
 combo_t key_combos[COMBO_COUNT] = {
   [COMBO_LBRC] = COMBO(combo_lbrc, KC_LBRC),
   [COMBO_RBRC] = COMBO(combo_rbrc, KC_RBRC),
   [COMBO_UNDS] = COMBO(combo_unds, KC_UNDS),
+  [COMBO_MINS] = COMBO(combo_mins, KC_MINS),
   [COMBO_EQL] = COMBO(combo_equal, KC_EQL),
 };

@@ -32,4 +32,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define MASTER_RIGHT
 // #define EE_HANDS
 
-#define COMBO_COUNT 4
+#define COMBO_COUNT 5
