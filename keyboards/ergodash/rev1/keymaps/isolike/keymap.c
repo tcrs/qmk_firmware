@@ -23,8 +23,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_RAISE] = LAYOUT_3key_1us(
      KC_F12,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______,          _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
      KC_INS,  KC_HOME, KC_UP,   KC_END,  _______, KC_PGUP, _______,          _______, KC_WH_U, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_INS,
-     _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_PGDN, _______,          _______, KC_WH_D, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, _______,
+     _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_PGDN, CMB_TOG,          _______, KC_WH_D, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, _______,
      _______, KC_PSCR, KC_SLCK, KC_PAUS, _______, _______, _______,          _______, _______, _______, _______, _______, _______, KC_GRV,
      _______, KC_RGUI, _______, _______,          _______, _______,          _______, _______,          _______, _______, _______, _______
   )
+};
+
+enum combos {
+  COMBO_LBRC,
+  COMBO_RBRC,
+  COMBO_UNDS,
+  COMBO_EQL,
+};
+
+#define COMBO_DECL2(name, k0, k1) \
+  const uint16_t PROGMEM combo_ ## name[] = { KC_ ## k0, KC_ ## k1, COMBO_END }
+
+COMBO_DECL2(lbrc, M, COMM);
+COMBO_DECL2(rbrc, COMM, DOT);
+COMBO_DECL2(unds, L, SCLN);
+COMBO_DECL2(equal, SLSH, NUHS);
+
+combo_t key_combos[COMBO_COUNT] = {
+  [COMBO_LBRC] = COMBO(combo_lbrc, KC_LBRC),
+  [COMBO_RBRC] = COMBO(combo_rbrc, KC_RBRC),
+  [COMBO_UNDS] = COMBO(combo_unds, KC_UNDS),
+  [COMBO_EQL] = COMBO(combo_equal, KC_EQL),
 };
